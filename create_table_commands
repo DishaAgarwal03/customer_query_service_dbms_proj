@@ -1,6 +1,17 @@
 
-customer(C_ID, name, address, email_address)				email_address references credentials
-agent(A_ID, name, email_address)						email_address references credentials
-message(M_ID, sub, body, timestamp, sender_type, con_id, pm_id)	in_reply_to ref m_id, con_id ref conversation, pm_id ref message
-conversation(CON_ID, status, c_id, a_id)					c_id references customer, a_id references agent
-credentials(email_address, username, password)
+create table customer(
+  c_id number(6) primary key,
+  name varchar(20),
+  address varchar(50),
+  email_address varchar(50)
+  );
+  --				email_address references credentials
+  
+create table agent(
+  a_id number(6) primary key,
+  name varchar(20), 
+  email_address varchar(50)
+  );		
+  --        email_address references credentials
+  
+  
