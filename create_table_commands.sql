@@ -38,6 +38,7 @@ create table message(
 
 alter table messsage add constraint pm_id_as_fk foreign key(pm_id) references message(m_id);
 
+alter table conversation add constraint sender_type_check check(sender_type in ('A','C'));
 
 
 
