@@ -30,20 +30,20 @@ insert into credentials values('James_Davis11@gmail.com', 'James_Davis', '');
 
 
 --conversation(CON_ID, status, c_id, a_id)					c_id references customer, a_id references agent
-insert into conversation values(1000, 'Ongoing', , );
-insert into conversation values(1001, 'Resolved', , );
-insert into conversation values(1002, 'Ongoing', , );
-insert into conversation values(1003, 'Resolved', , );
-insert into conversation values(1004, 'Resolved', , );
+insert into conversation values(1000, 'Ongoing', 1, 101);
+insert into conversation values(1001, 'Resolved', 2, 102);
+insert into conversation values(1002, 'Ongoing', 3, 103);
+insert into conversation values(1003, 'Resolved', 4, 104);
+insert into conversation values(1004, 'Resolved', 5, 105);
 
-insert into conversation values(1005, 'Resolved', , );
-insert into conversation values(1006, 'Ongoing', , );
-insert into conversation values(1007, 'Ongoing', , );
-insert into conversation values(1008, 'Resolved', , );
-insert into conversation values(1009, 'Resolved', , );
+insert into conversation values(1005, 'Resolved', 6, 106);
+insert into conversation values(1006, 'Ongoing', 7, 107);
+insert into conversation values(1007, 'Ongoing', 8, 101);
+insert into conversation values(1008, 'Resolved', 9, 102);
+insert into conversation values(1009, 'Resolved', 10, 103);
 
-insert into conversation values(1010, 'Resolved', , );
-insert into conversation values(1011, 'Ongoing', , );
-insert into conversation values(1012, 'Ongoing', , );
+insert into conversation values(1010, 'Resolved', 11, 104);
+insert into conversation values(1011, 'Ongoing', 12, 105);
+insert into conversation values(1012, 'Ongoing', 13, 106);
 
 
