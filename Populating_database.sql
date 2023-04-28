@@ -71,7 +71,13 @@ insert into conversation values(1010, 'Resolved', 11, 104);
 insert into conversation values(1011, 'Ongoing', 12, 105);
 insert into conversation values(1012, 'Ongoing', 13, 106);
 
-message(M_ID, sub, body, timestamp, sender_type, con_id, pm_id)	        con_id ref conversation, pm_id ref message
+-- message(M_ID, sub, body, timestamp, sender_type, con_id, pm_id)	        con_id ref conversation, pm_id ref message
+insert into message values(10001, '', '', '', 'C', 1000, null);
+insert into message values(10002, '', '', '', 'A', 1000, 10001);
+
+insert into message values(10011, '', '', '', 'C', 1001, null);
+insert into message values(10012, '', '', '', 'A', 1001, 10011);
+
 
 
 
