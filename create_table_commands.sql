@@ -21,8 +21,10 @@ create table conversation(
   con_id number(6) primary key,
   status varchar(12),
   c_id number(6) references customer,
-  a_id number(6) references agent
+  a_id number(6) references agent     
   );
+  
+alter table conversation add constraint status_check  check(status in ('Resolved','Ongoing'));
 
 create table message(
   M_ID number(6) primary key, 
