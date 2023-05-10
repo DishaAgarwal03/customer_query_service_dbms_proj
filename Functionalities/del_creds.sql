@@ -31,7 +31,7 @@ begin
                 end if;
             end loop;
         else
-            for i in c1
+            for i in c2
             loop
                 if i.email_address=pl_email then
                     flag1:=1;
