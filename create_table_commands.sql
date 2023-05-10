@@ -41,7 +41,12 @@ alter table message add constraint pm_id_as_fk foreign key(pm_id) references mes
 
 alter table message add constraint sender_type_check check(sender_type in ('A','C'));
 
-
+create table user_log(
+email_address varchar(50),
+name varchar(20),
+address varchar(50),
+end_of_tenure date
+);
 
   
   
