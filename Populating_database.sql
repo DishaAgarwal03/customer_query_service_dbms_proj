@@ -72,52 +72,52 @@ insert into conversation values(1011, 'Ongoing', 212, 105);
 insert into conversation values(1012, 'Ongoing', 213, 106);
 
 -- message(M_ID, sub, body, timestamp, sender_type, con_id, pm_id)	        con_id ref conversation, pm_id ref message
-insert into message values(10001, '', '', '', 'C', 1000, null);
+insert into message values(10001, 'Request for technical support', 'Hi, I'm having trouble connecting my device to the internet. Can you help me troubleshoot the issue?', '', 'C', 1000, null);
 insert into message values(10002, '', '', '', 'A', 1000, 10001);
 
-insert into message values(10011, '', '', '', 'C', 1001, null);
+insert into message values(10011, 'Inquiry about order status', 'Hi, I placed an order last week and was wondering when it will be shipped. Can you provide me with an update?', '', 'C', 1001, null);
 insert into message values(10012, '', '', '', 'A', 1001, 10011);
 
-insert into message values(10021, '', '', '', 'C', 1002, null);
+insert into message values(10021, 'Questions about product features or specifications', 'Hi, I'm interested in purchasing this product but I have a few questions about its features. Can you help me out?', '', 'C', 1002, null);
 insert into message values(10022, '', '', '', 'A', 1002, 10021);
 insert into message values(10023, '', '', '', 'C', 1002, 10022);
 insert into message values(10024, '', '', '', 'A', 1002, 10023);
 
-insert into message values(10031, '', '', '', 'C', 1003, null);
+insert into message values(10031, 'Complaint about product quality or performance', ' I recently purchased this product and I'm not satisfied with its quality. It seems to be malfunctioning. What can I do?', '', 'C', 1003, null);
 insert into message values(10032, '', '', '', 'A', 1003, 10031);
 
-insert into message values(10041, '', '', '', 'C', 1004, null);
+insert into message values(10041, 'Request for return or exchange of product', 'I'd like to return this product as it doesn't meet my needs. How can I do that?', '', 'C', 1004, null);
 insert into message values(10042, '', '', '', 'A', 1004, 10041);
 
-insert into message values(10051, '', '', '', 'C', 1005, null);
+insert into message values(10051, 'Questions about pricing or billing', 'I just received my bill and noticed a discrepancy in the pricing. Can you help me understand the charges?', '', 'C', 1005, null);
 insert into message values(10052, '', '', '', 'A', 1005, 10051);
 insert into message values(10053, '', '', '', 'C', 1005, 10052);
 insert into message values(10054, '', '', '', 'A', 1005, 10053);
 
-insert into message values(10061, '', '', '', 'C', 1006, null);
+insert into message values(10061, 'Request for customization or special order', 'Hi, I'm interested in purchasing a customized version of this product. Is that possible?', '', 'C', 1006, null);
 insert into message values(10062, '', '', '', 'A', 1006, 10061);
 
-insert into message values(10071, '', '', '', 'C', 1007, null);
+insert into message values(10071, 'Issues with account login or password', 'Hi, I can't seem to log into my account. Can you help me reset my password?', '', 'C', 1007, null);
 insert into message values(10072, '', '', '', 'A', 1007, 10071);
 insert into message values(10073, '', '', '', 'C', 1007, 10072);
 insert into message values(10074, '', '', '', 'A', 1007, 10073);
 
-insert into message values(10081, '', '', '', 'C', 1008, null);
+insert into message values(10081, 'Questions about shipping or delivery', ' I'm wondering when my order will arrive. Can you provide me with an estimated delivery date?', '', 'C', 1008, null);
 insert into message values(10082, '', '', '', 'A', 1008, 10081);
 
-insert into message values(10091, '', '', '', 'C', 1009, null);
+insert into message values(10091, 'Request for product recommendations or guidance', 'Hi, I'm not sure which product to choose for my specific needs. Can you provide me with some recommendations?', '', 'C', 1009, null);
 insert into message values(10092, '', '', '', 'A', 1009, 10091);
 
-insert into message values(10101, '', '', '', 'C', 1010, null);
+insert into message values(10101, 'Complaint about customer service experience', 'Hi, I was disappointed with the customer service I received when I called earlier. Can you help me resolve my issue?', '', 'C', 1010, null);
 insert into message values(10102, '', '', '', 'A', 1010, 10101);
 
-insert into message values(10111, '', '', '', 'C', 1011, null);
+insert into message values(10111, 'Questions about warranties or guarantees', 'Hi, I'm curious about the warranty or guarantee that comes with this product. Can you provide me with some information?', '', 'C', 1011, null);
 insert into message values(10112, '', '', '', 'A', 1011, 10111);
 
-insert into message values(10121, '', '', '', 'C', 1012, null);
+insert into message values(10121, 'Request for help with using a product or service.', 'Hi, I'm having trouble using this product. Can you provide me with some guidance?', '', 'C', 1012, null);
 insert into message values(10122, '', '', '', 'A', 1012, 10121);
 
-insert into message values(10131, '', '', '', 'C', 1013, null);
+insert into message values(10131, 'Request for assistance with a damaged or defective product', 'Hi, I received this product but it arrived damaged. What can I do?', '', 'C', 1013, null);
 insert into message values(10132, '', '', '', 'A', 1013, 10131);
 insert into message values(10133, '', '', '', 'C', 1013, 10132);
 insert into message values(10134, '', '', '', 'A', 1013, 10133);
