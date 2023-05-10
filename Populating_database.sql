@@ -72,7 +72,7 @@ insert into conversation values(1011, 'Ongoing', 212, 105);
 insert into conversation values(1012, 'Ongoing', 213, 106);
 
 -- message(M_ID, sub, body, timestamp, sender_type, con_id, pm_id)	        con_id ref conversation, pm_id ref message
-insert into message values(10001, 'Request for technical support', 'Hi, I'm having trouble connecting my device to the internet. Can you help me troubleshoot the issue?', '', 'C', 1000, null);
+insert into message values(10001, 'Request for technical support', 'Hi, I'm having trouble connecting my device to the internet. Can you help me troubleshoot the issue?', '', 'C', 1000, NULL);
 insert into message values(10002, '', '', '', 'A', 1000, 10001);
 
 insert into message values(10011, 'Inquiry about order status', 'Hi, I placed an order last week and was wondering when it will be shipped. Can you provide me with an update?', '', 'C', 1001, null);
