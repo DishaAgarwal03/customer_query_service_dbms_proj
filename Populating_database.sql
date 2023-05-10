@@ -25,33 +25,33 @@ insert into credentials values('Ava_Thompson2@gmail.com', 'Ava_Thompson', 'Ava_4
 insert into credentials values('James_Davis11@gmail.com', 'James_Davis', 'James_Davis98#98');
 
 
--- agent(A_ID, name, email_address)						email_address references credentials
-insert into agent values(101,'Sarah_Brown','Udupi,KA','Sarah_Brown2003@gmail.com');
-insert into agent values(102,'John_Smith','London,ENG','John_Smith2001@gmail.com');
-insert into agent values(103,'Lily_Chen','Mumbai,MH','Lily_Chen20@gmail.com');
-insert into agent values(104,'Alex_Kim','Los Angeles,CA','Alex_Kim1999@gmail.com');
-insert into agent values(105,'Anna_Johnson','Manipal,KA','Anna_Johnson1999@gmail.com');
+-- agent(A_ID, name,address, email_address)						email_address references credentials
+insert into agent values(101,'Sarah_Brown','IN,Udupi','Sarah_Brown2003@gmail.com');
+insert into agent values(102,'John_Smith','UK,London','John_Smith2001@gmail.com');
+insert into agent values(103,'Lily_Chen','IN,Mumbai','Lily_Chen20@gmail.com');
+insert into agent values(104,'Alex_Kim','US,Los Angeles','Alex_Kim1999@gmail.com');
+insert into agent values(105,'Anna_Johnson','IN,Manipal','Anna_Johnson1999@gmail.com');
 
-insert into agent values(106,'David_Lee','Gurugram','David_Lee1990@gmail.com');
-insert into agent values(107,'Emma_Davis','Egypt','Emma_Davis1990@gmail.com');
+insert into agent values(106,'David_Lee','IN,Gurugram','David_Lee1990@gmail.com');
+insert into agent values(107,'Emma_Davis','AF,Egypt','Emma_Davis1990@gmail.com');
 
 
 -- customer(C_ID, name, address, email_address)				email_address references credentials
-insert into customer values(201,'Lucas_Martin','Udupi,KA','Lucas_Martin1234@gmail.com');
-insert into customer values(202,'Olivia_Taylor','London,ENG','Olivia_Taylor5678@gmail.com');
-insert into customer values(203,'Ethan_Clark','Mumbai,MH','Ethan_Clark1212@gmail.com');
-insert into customer values(204,'Grace_Wilson','Los Angeles,CA','Grace_Wilson2004@gmail.com');
-insert into customer values(205, 'Michael_Baker','Manipal,KA','Michael_Baker2004@gmail.com');
+insert into customer values(201,'Lucas_Martin','IN,Udupi','Lucas_Martin1234@gmail.com');
+insert into customer values(202,'Olivia_Taylor','UK,London','Olivia_Taylor5678@gmail.com');
+insert into customer values(203,'Ethan_Clark','IN,Mumbai','Ethan_Clark1212@gmail.com');
+insert into customer values(204,'Grace_Wilson','US,Los Angeles','Grace_Wilson2004@gmail.com');
+insert into customer values(205, 'Michael_Baker','IN,Manipal','Michael_Baker2004@gmail.com');
 
-insert into customer values(206,'Emily_Jones','Berlin','Emily_Jones2003@gmail.com');
-insert into customer values(207,'Daniel_Garcia','Brussels','Daniel_Garcia2001@gmail.com');
-insert into customer values(208,'Sophia_Nguyen','Delhi','Sophia_Nguyen2000@gmail.com');
-insert into customer values(209,'William_Wright','Noida','William_Wright2000@gmail.com');
-insert into customer values(210,'Isabella_Martinez','Hyderabad','Isabella_Martinez2000@gmail.com');
+insert into customer values(206,'Emily_Jones','GE,Berlin','Emily_Jones2003@gmail.com');
+insert into customer values(207,'Daniel_Garcia','UK,Brussels','Daniel_Garcia2001@gmail.com');
+insert into customer values(208,'Sophia_Nguyen','IN,Delhi','Sophia_Nguyen2000@gmail.com');
+insert into customer values(209,'William_Wright','IN,Hyderabad','William_Wright2000@gmail.com');
+insert into customer values(210,'Isabella_Martinez','IN,Hyderabad','Isabella_Martinez2000@gmail.com');
 
-insert into customer values(211,'Matthew_Rodriguez','Frankfurt','Matthew_Rodriguez1998@gmail.com');
-insert into customer values(212,'Ava_Thompson','Venice','Ava_Thompson2@gmail.com');
-insert into customer values(213,'James_Davis','Sweden','James_Davis11@gmail.com');
+insert into customer values(211,'Matthew_Rodriguez','GE,Frankfurt','Matthew_Rodriguez1998@gmail.com');
+insert into customer values(212,'Ava_Thompson','IN,Delhi','Ava_Thompson2@gmail.com');
+insert into customer values(213,'James_Davis','GE,Berlin','James_Davis11@gmail.com');
 
 
 -- conversation(CON_ID, status, c_id, a_id)					c_id references customer, a_id references agent
