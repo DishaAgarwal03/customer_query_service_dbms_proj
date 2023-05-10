@@ -13,7 +13,8 @@ create table customer(
   
 create table agent(
   a_id number(6) primary key,
-  name varchar(20), 
+  name varchar(20),
+  address varchar(50),
   email_address varchar(50) references credentials
   );		
   
