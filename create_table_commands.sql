@@ -1,5 +1,5 @@
 create table credentials(
-  email_address varchar(30) primary key,
+  email_address varchar(50) primary key,
   username varchar(20),
   password varchar(20)
 );
