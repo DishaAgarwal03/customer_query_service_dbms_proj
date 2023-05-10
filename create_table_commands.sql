@@ -45,7 +45,8 @@ create table user_log(
 email_address varchar(50),
 name varchar(20),
 address varchar(50),
-end_of_tenure date
+end_of_tenure date,
+user_type varchar(20)
 );
 
   
