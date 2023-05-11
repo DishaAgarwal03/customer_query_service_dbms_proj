@@ -3,26 +3,31 @@ create table credentials(
   username varchar(20) not null,
   password varchar(20) not null
 );
-
-create table customer(
+  
+  create table customer(
   c_id number(6) primary key,
   name varchar(20) not null,
   address varchar(50),
-  email_address varchar(50) references credentials not null
+  email_address varchar(50) not null,
+  foreign key (email_address) references credentials(email_address) on delete cascade
   );
+ 
   
 create table agent(
   a_id number(6) primary key,
   name varchar(20) not null,
   address varchar(50),
-  email_address varchar(50) references credentials not null  
+  email_address varchar(50) not null,
+  foreign key (email_address) references credentials(email_address) on delete cascade
   );		
   
 create table conversation(
   con_id number(6) primary key,
   status varchar(12) default 'Ongoing',
-  c_id number(6) references customer not null,
-  a_id number(6) references agent not null    
+  c_id number(6) not null,
+  a_id number(6) not null,  
+  foreign key (c_id) references customer(c_id) on delete cascade,
+  foreign key (a_id) references agent(a_id) on delete cascade
   );
   
 alter table conversation add constraint status_check check(status in ('Resolved','Ongoing'));
@@ -31,10 +36,11 @@ create table message(
   M_ID number(6) primary key,  
   time_stamp timestamp(0), 
   sender_type varchar(10) not null, 
-  con_id number(6) references conversation not null, 
+  con_id number(6) not null, 
   pm_id number(6),
   sub varchar(200) not null, 
-  body varchar(400)
+  body varchar(400),
+  foreign key (con_id) references conversation(con_id) on delete cascade
 );
 
 alter table message add constraint pm_id_as_fk foreign key(pm_id) references message(m_id);
