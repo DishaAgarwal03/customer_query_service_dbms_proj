@@ -56,7 +56,7 @@ insert into customer values(213,'James_Davis','GE,Berlin','James_Davis11@gmail.c
 
 -- conversation(CON_ID, status, c_id, a_id)					c_id references customer, a_id references agent
 insert into conversation values(1000, 'Ongoing', 201, 101);
-insert into conversation values(1001, 'Resolved', 220, 102);
+insert into conversation values(1001, 'Resolved', 202, 102);
 insert into conversation values(1002, 'Ongoing', 203, 103);
 insert into conversation values(1003, 'Ongoing', 204, 104);
 insert into conversation values(1004, 'Resolved', 205, 105);
