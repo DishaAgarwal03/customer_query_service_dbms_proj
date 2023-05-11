@@ -1,6 +1,5 @@
 create or replace procedure c_interacts (pl_c_id number,pl_sub varchar,pl_body varchar) is
 cursor c1 is select * from conversation;
-cursor c2 is select * from agent;
 pl_id number(6);
 pl_m_id number(6);
 pl_pm_id number(6);
