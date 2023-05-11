@@ -3,7 +3,7 @@ drop table conversation;
 drop table customer;
 drop table agent;
 drop table credentials;
-
+drop table user_log;
 
 create table credentials(
   email_address varchar(50) primary key,
