@@ -1,3 +1,10 @@
+drop table message;
+drop table conversation;
+drop table customer;
+drop table agent;
+drop table credentials;
+
+
 create table credentials(
   email_address varchar(50) primary key,
   username varchar(20) not null,
