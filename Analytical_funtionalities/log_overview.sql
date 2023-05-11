@@ -6,7 +6,7 @@ cc number;
 cursor c1 is select * from user_log;
 begin
     disp('Details of deleted users:');
-    disp('email_address   '||'name   '||'address    '||'end_of_tenure     '||'user_type');
+    disp('email_address                 '||'name         '||'address        '||'end_of_tenure   '||'user_type');
     for i in c1
         loop
         disp(i.email_address||' '||i.name||' '||i.address||' '||i.end_of_tenure||' '||i.user_type);
