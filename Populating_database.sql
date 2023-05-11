@@ -141,6 +141,6 @@ insert into message values(10123, 'Assistance with product selection', 'Well, I'
 insert into message values(10124, 'Guidance', 'Based on those requirements, I would recommend our XYZ model. It has a lightweight design but also comes with a powerful processor and ample storage space. It also falls within your budget. Would you like more information on this product?', '', 'A', 1012, 10123);
 
 
-
+commit;
 
 
