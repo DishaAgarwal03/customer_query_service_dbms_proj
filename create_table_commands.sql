@@ -28,13 +28,13 @@ create table conversation(
 alter table conversation add constraint status_check check(status in ('Resolved','Ongoing'));
 
 create table message(
-  M_ID number(6) primary key, 
-  sub varchar(200) not null, 
-  body varchar(400), 
+  M_ID number(6) primary key,  
   time_stamp timestamp(0), 
   sender_type varchar(10) not null, 
   con_id number(6) references conversation not null, 
-  pm_id number(6)
+  pm_id number(6),
+  sub varchar(200) not null, 
+  body varchar(400)
 );
 
 alter table message add constraint pm_id_as_fk foreign key(pm_id) references message(m_id);
