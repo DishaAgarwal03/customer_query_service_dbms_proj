@@ -102,10 +102,10 @@ insert into message values(10055, 'Product Installation', 'Oh, I didn''t realize
 insert into message values(10056, 'Product Installation', 'That might be the issue. I recommend upgrading your computer''s hardware or purchasing a different product that meets your computer''s requirements. Let me know if you need assistance with either of those options.', '', 'A', 1005, 10055);
 
 insert into message values(10061, 'Payment not going through', 'I''m trying to complete a purchase on your website but my payment is not going through. Can you help me with this?', '', 'C', 1006, null);
-insert into message values(10062, 'Payment', 'Of course! Can you please provide me with more information about the issue you're facing?', '', 'A', 1006, 10061);
+insert into message values(10062, 'Payment', 'Of course! Can you please provide me with more information about the issue you''re facing?', '', 'A', 1006, 10061);
 
 insert into message values(10071, 'Trouble finding a specific product', 'Hi, I''m having trouble finding a specific product on your website. Can you help me navigate to it?', '', 'C', 1007, null);
-insert into message values(10072, 'Website Navigation', 'Of course! What is the name of the product you're looking for?', '', 'A', 1007, 10071);
+insert into message values(10072, 'Website Navigation', 'Of course! What is the name of the product you''re looking for?', '', 'A', 1007, 10071);
 insert into message values(10073, 'Website Navigation', 'It''s called the ABC widget.', '', 'C', 1007, 10072);
 insert into message values(10074, 'Website Navigation', 'Alright, let me take a look... It looks like the ABC widget is located in our "Widgets" category. You can access this category by clicking on "Products" in the top navigation bar, then selecting "Widgets" from the dropdown menu.', '', 'A', 1007, 10073);
 
