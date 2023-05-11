@@ -45,7 +45,7 @@ create table message(
   sender_type varchar(10) not null, 
   con_id number(6) not null, 
   pm_id number(6),
-  sub varchar(200) not null, 
+  sub varchar(80) not null, 
   body varchar(400),
   foreign key (con_id) references conversation(con_id) on delete cascade
 );
