@@ -29,8 +29,8 @@ alter table conversation add constraint status_check check(status in ('Resolved'
 
 create table message(
   M_ID number(6) primary key, 
-  sub varchar(40) not null, 
-  body varchar(200), 
+  sub varchar(200) not null, 
+  body varchar(400), 
   time_stamp timestamp(0), 
   sender_type varchar(10) not null, 
   con_id number(6) references conversation not null, 
