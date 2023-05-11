@@ -1,39 +1,39 @@
 create table credentials(
   email_address varchar(50) primary key,
-  username varchar(20),
-  password varchar(20)
+  username varchar(20) not null,
+  password varchar(20) not null
 );
 
 create table customer(
   c_id number(6) primary key,
-  name varchar(20),
+  name varchar(20) not null,
   address varchar(50),
-  email_address varchar(50) references credentials
+  email_address varchar(50) references credentials not null
   );
   
 create table agent(
   a_id number(6) primary key,
-  name varchar(20),
+  name varchar(20) not null,
   address varchar(50),
-  email_address varchar(50) references credentials
+  email_address varchar(50) references credentials not null  
   );		
   
 create table conversation(
   con_id number(6) primary key,
-  status varchar(12),
-  c_id number(6) references customer,
-  a_id number(6) references agent     
+  status varchar(12) default 'Ongoing',
+  c_id number(6) references customer not null,
+  a_id number(6) references agent not null    
   );
   
-alter table conversation add constraint status_check  check(status in ('Resolved','Ongoing'));
+alter table conversation add constraint status_check check(status in ('Resolved','Ongoing'));
 
 create table message(
   M_ID number(6) primary key, 
-  sub varchar(40), 
+  sub varchar(40) not null, 
   body varchar(200), 
   time_stamp timestamp, 
-  sender_type varchar(10), 
-  con_id number(6) references conversation, 
+  sender_type varchar(10) not null, 
+  con_id number(6) references conversation not null, 
   pm_id number(6)
 );
 
