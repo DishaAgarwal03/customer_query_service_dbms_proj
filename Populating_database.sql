@@ -73,7 +73,7 @@ insert into conversation values(1012, 'Ongoing', 213, 106);
 
 -- message(M_ID, sub, body, timestamp, sender_type, con_id, pm_id)	        con_id ref conversation, pm_id ref message
 insert into message values(10001, 'Payment being declined', 'Hi, I just tried to make a purchase on your website but my payment was declined. Can you help me with this?', '', 'C', 1000, NULL);
-insert into message values(10002, 'Payment', 'I'm sorry to hear that. Can you please provide me with more information about the error message you received?', '', 'A', 1000, 10001);
+insert into message values(10002, 'Payment', 'I am sorry to hear that. Can you please provide me with more information about the error message you received?', '', 'A', 1000, 10001);
 insert into message values(10003, 'Payment', 'It says "transaction declined, please contact your bank"', '', 'C', 1000, 10002);
 insert into message values(10004, 'Payment', 'Okay, it sounds like there might be an issue with your bank or credit card company. Have you checked with them to make sure there are no holds or issues with your account?', '', 'A', 1000, 10003);
 
@@ -83,10 +83,10 @@ insert into message values(10012, 'Order Status', 'Sure, let me look up your ord
 
 insert into message values(10021, 'Trouble with account creation', 'I am trying to create an account on your website but I'm having trouble. Can you help me with this?', '', 'C', 1002, null);
 insert into message values(10022, 'Account Creation', 'Absolutely! Can you please provide me with some more information about the issue you're facing?', '', 'A', 1002, 10021);
-insert into message values(10023, 'Account Creation', 'Well, I'm not receiving the account activation email after I submit my information.', '', 'C', 1002, 10022);
+insert into message values(10023, 'Account Creation', 'Well, I am not receiving the account activation email after I submit my information.', '', 'C', 1002, 10022);
 insert into message values(10024, 'Account Creation', 'I see. Can you please check your spam or junk folder to see if the email ended up there? If it's not there, I can manually activate your account for you', '', 'A', 1002, 10023);
 
-insert into message values(10031, 'Unavailability of product', 'Hi, I'm interested in purchasing a product PXYZ but it's showing as out of stock on your website. Can you provide me with an update on when it will be available again?', '', 'C', 1003, null);
+insert into message values(10031, 'Unavailability of product', 'Hi, I am interested in purchasing a product PXYZ but it's showing as out of stock on your website. Can you provide me with an update on when it will be available again?', '', 'C', 1003, null);
 insert into message values(10032, 'Product Unavailability', 'Thank you for your inquiry. Let me check the availability of this product for you... It looks like we will be restocking it in approximately two weeks. Would you like me to notify you when it becomes available?', '', 'A', 1003, 10031);
 insert into message values(10033, 'Product Unavailability', 'Yes, please do. Thank you!', '', 'C', 1003, 10032);
 insert into message values(10034, 'Product Unavailability', 'Not a problem. I'll add you to our waiting list and you'll receive an email notification as soon as the product is back in stock. Let me know if you have any other questions or concerns.', '', 'A', 1003, 10033);
