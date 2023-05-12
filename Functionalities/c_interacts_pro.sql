@@ -7,8 +7,9 @@ pl_pm_id number(6);
 pl_con_id number(6);
 pl_a_id number(6);
 flag number(1);
-agent_max number(6);
+min_count number(6);
 agent_min number(6);
+count_c number;
 begin
     flag:=0;
     for i in c1
@@ -21,16 +22,17 @@ begin
             end if;
         end loop;
     if flag=0 then
-        select max(a_id) into agent_max from agent;
-        select min(a_id) into agent_min from agent;
+        min_count:=999999;
+        for i in c2
+            loop
+                select count(con_id) into count_c from conversation where a_id=i.a_id and status='Ongoing';
+                if min_count>=count_c then
+                    min_count:=count_c;
+                    agent_min:=i.a_id;
+                end if;
+            end loop;
         select max(con_id) into pl_con_id from conversation;
-        select a_id into pl_a_id from conversation where con_id=pl_con_id;
-        if pl_a_id=agent_max then
-            pl_a_id:=agent_min;
-        else
-            pl_a_id:=pl_a_id+1;
-        end if;
-        insert into conversation values(pl_con_id+1,'Ongoing',pl_c_id,pl_a_id);
+        insert into conversation values(pl_con_id+1,'Ongoing',pl_c_id,agent_min);
         select max(m_id) into pl_m_id from message;
         select max(m_id) into pl_pm_id from message m,conversation c where c.c_id=pl_c_id and m.con_id=c.con_id ;
         insert into message values(pl_m_id+1,current_timestamp,'C',pl_con_id,pl_pm_id,pl_sub,pl_body);
