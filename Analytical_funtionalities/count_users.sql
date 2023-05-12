@@ -14,7 +14,7 @@ begin
     disp('Total number of conversations: ');
     c_num:=count_users('con');
     disp(TO_CHAR(c_num));
-    disp('Total number of resolve conversations: ');
+    disp('Total number of resolved conversations: ');
     c_num:=count_users('con_r');
     disp(TO_CHAR(c_num));
     disp('Total number of ongoing conversations: ');
