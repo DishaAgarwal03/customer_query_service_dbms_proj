@@ -1,5 +1,6 @@
 
 -- credentials(email_address, username, password)
+insert into credentials values('admin123@gmail.com', 'admin', 'Admin_123');
 insert into credentials values('Sarah_Brown2003@gmail.com', 'Sarah_Brown', 'SarahB$2003');
 insert into credentials values('John_Smith2001@gmail.com', 'John_Smith', 'JohnSmith@1111');
 insert into credentials values('Lily_Chen20@gmail.com', 'Lily_Chen', 'Chen@lil1');
