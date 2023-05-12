@@ -4,7 +4,6 @@ cursor c2 is select * from customer;
 cc number;
 cur_max number;
 cur_min number;
-pl_id number;
 begin
     if type='A' then
         for i in c1
@@ -49,10 +48,15 @@ begin
                 select count(con_id) into cur_max from conversation where a_id=i.a_id and status='Resolved';
                 if cur_max>=cc then
                     cc:=cur_max;
-                    pl_id:=i.a_id;
                 end if;
             end loop;
-        dbms_output.put_line('Agent : '||pl_id||' has max resolved queries of '||cc);
+        for i in c1
+            loop
+                select count(con_id) into cur_max from conversation where a_id=i.a_id and status='Resolved';
+                if cur_max=cc then
+                    dbms_output.put_line('Agent : '||i.a_id||' has max resolved queries of '||cc);
+                end if;
+            end loop;
     elsif type='min_r' then
         cc:=999999;
         for i in c1
@@ -60,10 +64,15 @@ begin
                 select count(con_id) into cur_min from conversation where a_id=i.a_id and status='Resolved';
                 if cur_min<=cc then
                     cc:=cur_min;
-                    pl_id:=i.a_id;
                 end if;
             end loop;
-        dbms_output.put_line('Agent : '||pl_id||' has min resolved queries of '||cc);
+        for i in c1
+            loop
+                select count(con_id) into cur_min from conversation where a_id=i.a_id and status='Resolved';
+                if cur_min=cc then
+                dbms_output.put_line('Agent : '||i.a_id||' has min resolved queries of '||cc);          
+                end if;
+            end loop;
     end if;
 
 end;
